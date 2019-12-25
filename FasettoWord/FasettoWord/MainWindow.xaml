@@ -5,9 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FasettoWord"
         mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        x:Name="AppWindow"
         Icon="Images/Logo/logo-small.png"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="Title of titles" Height="450" Width="800">
 
-    </Grid>
+    <WindowChrome.WindowChrome>
+        <WindowChrome ResizeBorderThickness="{Binding ResizeBorderThickness}" />
+    </WindowChrome.WindowChrome>
+    
+    <StackPanel>
+        <TextBlock Text="Test" FontSize="40" />
+        <TextBlock Text="Test" FontFamily="{StaticResource LatoThin}" FontSize="40" />
+        <TextBlock Text="Test" FontFamily="{StaticResource LatoRegular}" FontSize="40" />
+        <TextBlock Text="Test" FontFamily="{StaticResource LatoMedItalic}" FontSize="40" />
+
+        <TextBlock Text="{Binding Test}" />
+    </StackPanel>
 </Window>
