@@ -16,7 +16,7 @@ namespace FasettoWord
         #endregion
 
         #region Public Properties
-        public int ResizeBorder { get; set; } = 1;
+        public int ResizeBorder { get; set; } = 4;
 
         public Thickness ResizeBorderThickness { get { return new Thickness (ResizeBorder + OuterMarginSize); } }
 
@@ -31,7 +31,7 @@ namespace FasettoWord
                 mOuterMarginSize = value;
             }
         }
-
+         
         public Thickness OuterMarginSizeThickness { get { return new Thickness(OuterMarginSize); } }
 
         public int WindowRadius
@@ -50,6 +50,8 @@ namespace FasettoWord
         public CornerRadius WindowCornerRadius { get { return new CornerRadius(WindowRadius); } }
 
         public int TitleHeight { get; set; } = 42;
+
+        public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
         #region Constructor
         public WindowViewModel(Window window)
