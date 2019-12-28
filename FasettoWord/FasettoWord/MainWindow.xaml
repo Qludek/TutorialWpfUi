@@ -13,8 +13,13 @@
         Title="Title of titles" Height="450" Width="800">
 
     <WindowChrome.WindowChrome>
-        <WindowChrome ResizeBorderThickness="{Binding ResizeBorderThickness}" />
+        <WindowChrome 
+            ResizeBorderThickness="{Binding ResizeBorderThickness}"
+            CaptionHeight= "{Binding TitleHeight}"
+            GlassFrameThickness="0"
+            />
     </WindowChrome.WindowChrome>
+
     
     <StackPanel>
         <TextBlock Text="Test" FontSize="40" />
