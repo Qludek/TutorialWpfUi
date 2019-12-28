@@ -8,6 +8,7 @@
         WindowStyle="None"
         AllowsTransparency="True"
         x:Name="AppWindow"
+        WindowStartupLocation="CenterScreen"
         Icon="Images/Logo/logo-small.png"
         Title="Title of titles" Height="450" Width="800">
 
