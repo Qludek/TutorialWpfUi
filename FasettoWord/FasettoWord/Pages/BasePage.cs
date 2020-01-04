@@ -12,7 +12,7 @@ namespace FasettoWord
 
         public PageAnimation PageLoadAnimation { get; set; } = PageAnimation.SlideAndFadeInFromRight;
 
-        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeToLeft;
+        public PageAnimation PageUnloadAnimation { get; set; } = PageAnimation.SlideAndFadeOutToLeft;
 
         public float SlideSeconds { get; set; } = 0.8f;
 
@@ -51,6 +51,22 @@ namespace FasettoWord
                 case PageAnimation.SlideAndFadeInFromRight:
 
                     await this.SlideAndFadeInFromRight(this.SlideSeconds);
+                    break;
+            }
+        }
+
+        public async Task AnimateOut()
+        {
+            if (this.PageUnloadAnimation == PageAnimation.None)
+            {
+                return;
+            }
+
+            switch (this.PageUnloadAnimation)
+            {
+                case PageAnimation.SlideAndFadeOutToLeft:
+
+                    await this.SlideAndFadeOutToLeft(this.SlideSeconds);
                     break;
             }
         }

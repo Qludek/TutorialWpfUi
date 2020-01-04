@@ -4,6 +4,6 @@
     {
         None = 0,
         SlideAndFadeInFromRight = 1,
-        SlideAndFadeToLeft = 2
+        SlideAndFadeOutToLeft = 2
     }
 }
