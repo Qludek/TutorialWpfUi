@@ -8,6 +8,7 @@ using System.Windows.Input;
 
 namespace FasettoWord
 {
+
     class WindowViewModel : BaseViewModel
     {
         #region PrivateMember
