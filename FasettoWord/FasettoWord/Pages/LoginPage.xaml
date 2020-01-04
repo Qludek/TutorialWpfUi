@@ -30,9 +30,10 @@
                                    Foreground="{StaticResource WordBlueBrush}" />
                             <TextBlock Text="It's about to get fun" 
                                        FontSize="{StaticResource FontSizeRegular}"
-                                       Foreground="{StaticResource ForegroundDarkBrush}"/>
-                            <TextBox />
-                            <TextBox />
+                                       Foreground="{StaticResource ForegroundDarkBrush}"
+                                       Margin="0 0 0 20"/>
+                            <TextBox Tag="Email"/>
+                            <TextBox Tag="Password" Margin="0 0 0 20"/>
 
                             <Button Content="Next" HorizontalAlignment="Center" />
                         </StackPanel>
