@@ -12,6 +12,7 @@ namespace FasettoWord
         {
             var sb = new Storyboard();
             sb.AddSlideFromRight(seconds, page.WindowWidth);
+            sb.AddFadeIn(seconds);
 
             sb.Begin(page);
 

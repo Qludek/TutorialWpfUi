@@ -13,5 +13,13 @@ namespace FasettoWord
             Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
             storyboard.Children.Add(animation);
         }
+
+        public static void AddFadeIn(this Storyboard storyboard, float seconds)
+        {
+            var animation = new DoubleAnimation { Duration = new Duration(TimeSpan.FromSeconds(seconds)), From = 0, To = 1 };
+
+            Storyboard.SetTargetProperty(animation, new PropertyPath("Opacity"));
+            storyboard.Children.Add(animation);
+        }
     }
 }
