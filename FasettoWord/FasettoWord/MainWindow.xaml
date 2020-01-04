@@ -96,7 +96,7 @@
     </Window.Resources>
 
 
-    <Grid Background="{StaticResource BackgroundVeryLightBrush}">
+    <Grid Background="{StaticResource WordBlueBrush}">
         <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" />
     </Grid>
 
