@@ -16,6 +16,7 @@ namespace FasettoWord
         private int mOuterMarginSize = 10;
 
         private int mWindowRadius = 10;
+
         #endregion
 
         #region Public Properties
@@ -23,11 +24,13 @@ namespace FasettoWord
         public double WindowMinimumWidth { get; set; } = 400;
 
         public double WindowMinimumHeight { get; set; } = 400;
-        public int ResizeBorder { get; set; } = 4;
+
+        public bool Borderless { get { return (mWindow.WindowState == WindowState.Maximized); } }
+        public int ResizeBorder { get { return Borderless ? 0 : 6;  } }
 
         public Thickness ResizeBorderThickness { get { return new Thickness (ResizeBorder + OuterMarginSize); } }
 
-        public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }
+        public Thickness InnerContentPadding { get; set; } = new Thickness(0);
 
         public int OuterMarginSize
         {
